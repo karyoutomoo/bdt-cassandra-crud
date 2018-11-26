@@ -159,7 +159,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Cubettech\Lacassa\CassandraServiceProvider::class,
         /*
          * Package Service Providers...
          */

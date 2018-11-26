@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('add','WineController@create');
+Route::post('add','WineController@store');
+Route::get('wines','WineController@index');
+Route::get('edit/{title}','WineController@edit');
+Route::post('edit/{title}','WineController@update');
+Route::delete('{title}','WineController@destroy');

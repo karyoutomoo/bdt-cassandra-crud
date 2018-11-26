@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'cassandra'),
 
     /*
     |--------------------------------------------------------------------------
@@ -68,6 +68,15 @@ return [
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
+        ],
+
+        'cassandra' => [
+        'driver' => 'Cassandra',
+        'host' => env('DB_HOST', 'localhost'),
+        'port' => env('DB_PORT', 9042),
+        'keyspace' => env('DB_DATABASE', 'winereviews'),
+        'username' => env('DB_USERNAME', ''),
+        'password' => env('DB_PASSWORD', ''),
         ],
 
         'sqlsrv' => [
